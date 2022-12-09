@@ -1,0 +1,160 @@
+.register {
+    max-width: 100vw;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
+}
+
+.register__box {
+    width: 40vw;
+    min-height: 500px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+}
+
+.register__box--heading {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.register__head__text::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary);
+    margin-top: -5px;
+}
+
+.register__box--body {
+    width: 90%;
+    min-height: 85%;
+    margin-top: 10px;
+}
+
+.register__box--body--opt {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-top: none;
+}
+
+#active_register {
+    border-top: 2px solid var(--secondary);
+    background-color: white;
+}
+
+.register--signin {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    /* transition: all 2s ease; */
+}
+.register--signup {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.register__box--body--form {
+    width: 100%;
+    min-height: 90%;
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+
+/* form section */
+.register__login {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.register__form--input--cont {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.register__form--input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(112, 112, 112);
+    outline: none;
+    padding: 5px 10px;
+}
+
+.register__form--input:focus {
+    border: 1px solid var(--primary);
+}
+
+.register__submit__button {
+    width: 90%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    background-color: #00f090;
+    cursor: pointer;
+    /* fontw */
+}
+
+#disable {
+    width: 90%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    /* background-color: #00f090; */
+    background-color: #c4c4c4;
+    cursor: pointer;
+    /* fontw */
+}
+
+.dialogButtonLink {
+    text-decoration: none;
+    /* width: 70px;
+    height: 30px; */
+    background-color: var(--secondary);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+}
