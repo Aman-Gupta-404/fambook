@@ -9,6 +9,10 @@
 /coverage
 
 # production
+/public
+/src
+/package.json
+/package-lock.json
 # /build
 
 # misc
