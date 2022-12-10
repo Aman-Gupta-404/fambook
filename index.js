@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 import postRoutes from "./routes/posts.js"
 import userRoutes from "./routes/user.js"
 import authRoute from "./routes/auth.js"
+import path from "path";
 
 const app = express();
 dotenv.config()
@@ -26,9 +27,12 @@ app.use('/api/auth', authRoute);
 const CONNECTION_URL = process.env.MONGODBURL;
 const PORT = process.env.PORT || 5000;
 
-if(process.env.NODE_ENV === "production") {
-    app.use(express.static('client/build'));
-}
+// read static files
+app.use(express.static(path.join(__dirname, './client/build')));
+
+app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
+})
 
 // connecting to the mongoose
 mongoose.connect(CONNECTION_URL, { useNewURLParser: true, useUnifiedTopology: true })
