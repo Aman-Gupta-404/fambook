@@ -8,9 +8,14 @@ import postRoutes from "./routes/posts.js"
 import userRoutes from "./routes/user.js"
 import authRoute from "./routes/auth.js"
 import path from "path";
+import { fileURLToPath } from 'url';
 
 const app = express();
 dotenv.config()
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 app.use('/Images', express.static('Images'))
 app.use(bodyParser.json({limit: "30mb", extended: true}));
