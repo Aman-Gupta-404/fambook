@@ -5,10 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "build": "cd client && npm build",
-    "install-client": "cd client && npm install",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm start\" \"npm run client\""
   },
