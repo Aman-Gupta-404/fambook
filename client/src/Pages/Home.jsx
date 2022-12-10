@@ -26,7 +26,7 @@ function Home() {
 
     const getPostFunction = async () => {
       setLoading(true);
-      await axios.get("http://localhost:5000/api/posts/get").then((result) => {
+      await axios.get(`/api/posts/get`).then((result) => {
         setLoading(false);
         // console.log(result.data);
         setPostData(result.data.posts)

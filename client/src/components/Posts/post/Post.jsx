@@ -5,7 +5,7 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 
 function Post({postdata}) {
   // console.log(postdata)
-  const imageuri = process.env.REACT_APP_IMG_URI + "/Images/" + postdata.selectedFile;
+  const imageuri = "/Images/" + postdata.selectedFile;
   // console.log(imageuri)
   return (
     <div className='postcard'>

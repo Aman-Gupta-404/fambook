@@ -32,7 +32,7 @@ function Account() {
     const deleteUserFunction = async (e) => {
         e.preventDefault();
         // Making the url request to delete user from state
-        const apiURL = `${process.env.REACT_APP_IMG_URI}/api/user/delete/${user._id}`
+        const apiURL = `/api/user/delete/${user._id}`
         const deleteRes = await axios.delete(apiURL, {_id: user._id});
         console.log(deleteRes);
     }
@@ -40,7 +40,7 @@ function Account() {
     const logOutUser = async (e) => {
         e.preventDefault();
         // clearing out the cache and cookies and the states
-        const apiURL = `${process.env.REACT_APP_IMG_URI}/api/user/logout/${user._id}`
+        const apiURL = `/api/user/logout/${user._id}`
         const headers = {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${user.accessToken}`,

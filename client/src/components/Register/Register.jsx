@@ -106,7 +106,7 @@ function Register({ isLogin }) {
         if(!flag) {
             // setLoginData(true)
             const user = loginData;
-            axios.post("http://localhost:5000/api/user/signin", user, {withCredentials: true}).then(res => {
+            axios.post(`/api/user/signin`, user, {withCredentials: true}).then(res => {
                 // store the user in redux
                 // check error response from server
                 console.log(res.data.loginSuccess && !res.data.error)
@@ -140,7 +140,7 @@ function Register({ isLogin }) {
         const flag = signUpData.firstName !== "" || signUpData.lastName !== "" || signUpData.email !== "" || signUpData.age !== "" || signUpData.gender !== "" || signUpData.password !== "";
         if(!flag) {
             const userData = signUpData;
-            axios.post("http://localhost:5000/api/user/create", userData).then(res => {
+            axios.post(`/api/user/create`, userData).then(res => {
                 console.log(res.data)
             }).catch(err => {
                 console.log(err)

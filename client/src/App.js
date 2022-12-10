@@ -32,7 +32,7 @@ function App() {
   const refreshTokens = async () => {
     console.log(loginFlag)
     // if(loginFlag) {
-      const uri = `${process.env.REACT_APP_IMG_URI}/api/auth/gettoken`
+      const uri = `/api/auth/gettoken`
       const resData = await axios.get(uri, {
         withCredentials: true
       })

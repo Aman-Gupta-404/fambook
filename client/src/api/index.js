@@ -1,8 +1,8 @@
 import axios from 'axios'
 // import post from '../redux/postSlice';
 
-const url = "http://localhost:5000";
+// const url = process.env.REACT_APP_IMG_URI;
 
-export const fetchPost = () => axios.get(`${url}/posts/get`);
+export const fetchPost = () => axios.get(`/posts/get`);
 
-export const createPost = (post) => axios.post(`${url}/posts/create`, post);
+export const createPost = (post) => axios.post(`/posts/create`, post);

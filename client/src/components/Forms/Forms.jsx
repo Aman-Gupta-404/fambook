@@ -52,7 +52,7 @@ function Forms() {
       }
 
       // TODO: undo them
-      const sendData = await axios.post(`http://localhost:5000/api/posts/create/${user._id}`, tempPostData, {
+      const sendData = await axios.post(`/api/posts/create/${user._id}`, tempPostData, {
         headers: headers
       });
       console.log(sendData)

@@ -18,7 +18,7 @@ function MyPost() {
 
     const getPostFunction = async () => {
         setLoading(true);
-        const URI = `${process.env.REACT_APP_IMG_URI}/api/posts/mypost/${user._id}`
+        const URI = `/api/posts/mypost/${user._id}`
 
         const headers = {
             'Content-Type': 'application/json',
